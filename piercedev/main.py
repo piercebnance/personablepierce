@@ -32,7 +32,7 @@ posts: list[dict] = [
 def home(request: Request):
     return templates.TemplateResponse(
         request,
-        "layout.html",
+        "home.html",
         {"posts": posts, "title": "Home"},
     )
 
