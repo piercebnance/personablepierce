@@ -1,18 +1,97 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<body>
-    <h1>Pierce Nance</h1>
-    <p>Software Developer, IT Specialist, Illustrator</p>
-</body>
+<head>
+    <title>Pierce's Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-1 {
+            background-image: url('/static/icons/panda.png');
+            min-height: 100%;
+        }
+    </style>
+</head>
 
 <body>
-    <h1>About Me</h1>
-    <p>What's up! I'm Pierce, a software dev and illustrator from San Diego. I like to create cool things and draw awesome pictures.<br>
-    Im gonna expand on this later lol.</p>
-</body>
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="row align-items-center" style="height: 100vh;">
+            <div class="col text-center">
+                <h1 class="display-1">Pierce Nance</h1>
+                <p>Software Developer, IT Specialist, Illustrator</p>
+            </div>
+
+        </div>
+    </div>
 
 
+    <div class="container-fluid">
+        <div class="row align-items-center" style="height: 50vh;">
+            <div class="col-sm-3 p-3 bg-dark"></div> <!-- Empty column for spacing reference -->
+            <div class="col-sm-3 p-3 text-center">
+                <h1>About Me</h1>
+                <p>What's up! I'm Pierce, a software dev and artist from San Diego. I like to create cool things and draw awesome
+                    pictures.<br>
+                    Im gonna expand on this later lol.</p>
+            </div>
+            <div class="col-sm-3 p-3 text-center">
+                <img src="{{ url_for('static', path='icons/me_on_beach_nobottle.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
+            </div>
+            <div class="col-sm-3 p-3 bg-dark"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center" style="height: 50vh;">
+            <div class="col text-center">
+                <h1>Skills</h1>
+                <h2>Proficient Languages:</h2>
+                <p>Python, HTML, CSS, SQL, JavaScript, C</p>
+                <h2>Familiar Frameworks:</h2>
+                <p>NumPy, Pandas, Scikit, Django, PyTorch</p>
+                <h2>Soft Skills:</h2>
+                <p>GitHub, Agile Development, IT, Networks, Customer Service, Problem Solving</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center" style="height: 50vh;">
+            <div class="col text-center">
+                <h1>Projects</h1>
+                <p><a href="#">Marketing Research</a></p>
+                <p><a href="#">Amazon Web Scraper</a></p>
+                <p><a href="#"></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center" style="height: 50vh;">
+            <div class="col text-center">
+                <h1>Contact Me:</h1>
+                <p><a href="mailto:piercebnance@gmail.com">piercebnance@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/pierce-nance/">LinkedIn</a></p>
+                <p><a href="https://github.com/piercedev">GitHub</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+<!--
 {% for post in posts %}
 <article>
     <p>
@@ -24,3 +103,5 @@
 </article>
 {% endfor %}
 {% endblock content %}
+-->
+</body>
