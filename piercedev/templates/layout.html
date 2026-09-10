@@ -9,12 +9,25 @@
 
 <body>
     <header>
-        <nav>
-            <a>Pierce's Site</a>
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">Art Page</a>
-            <a href="#">Cool Things</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center text-white p-1" >
+            <a class="navbar-brand"> Pierce's Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Art Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cool Things</a>
+                    </li>
         </nav>
     </header>
 

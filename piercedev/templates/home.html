@@ -25,49 +25,103 @@
 
 <body>
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="row align-items-center" style="height: 100vh;">
-            <div class="col text-center">
+        <div class="row align-items-center" style="height: 100vh; padding: -5px;">
+            <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
+            <div class="col-sm-4 text-center bg-dark text-white p-10 rounded opacity-75">
                 <h1 class="display-1">Pierce Nance</h1>
                 <p>Software Developer, IT Specialist, Illustrator</p>
             </div>
-
+            <div class="col-sm-4 p-3"></div>
         </div>
     </div>
 
 
     <div class="container-fluid">
-        <div class="row align-items-center" style="height: 50vh;">
-            <div class="col-sm-3 p-3 bg-dark"></div> <!-- Empty column for spacing reference -->
-            <div class="col-sm-3 p-3 text-center">
-                <h1>About Me</h1>
+        <div class="row align-items-center bg-dark" style="height: 75vh;">
+            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+            <div class="col-sm-3 p-3 bg-dark text-center text-white">
+                <h2 class="display-3">About Me</h2>
                 <p>What's up! I'm Pierce, a software dev and artist from San Diego. I like to create cool things and draw awesome
                     pictures.<br>
                     Im gonna expand on this later lol.</p>
             </div>
-            <div class="col-sm-3 p-3 text-center">
-                <img src="{{ url_for('static', path='icons/me_on_beach_nobottle.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
+            <div class="col-sm-3 p-3 bg-dark text-center">
+                <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
             </div>
-            <div class="col-sm-3 p-3 bg-dark"></div>
+            <div class="col-sm-3 p-3"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="container-fluid">
+        <div class="row align-items-center bg-dark">
+            <div class="col text-center text-white">
+                <h1 class="display-3 underline">Skills</h1>
+                <h2 class="display-5">Proficient Languages:</h2>
+                <div class="row justify-content-center p-5">
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/Python-Symbol.png') }}" style="max-height: 100px;" alt="Python"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/html.png') }}" style="max-height: 100px;" alt="HTML"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/CSS_logo.webp') }}" style="max-height: 100px;" alt="CSS"
+                            class="img-fluid">
+                    </div>
+                </div>
+                <div class="row justify-content-center p-5">
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/sql_nobg.png') }}" style="max-height: 100px;"
+                            alt="SQL" class="img-fluid">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/JS_logo.png') }}" style="max-height: 100px;" alt="JavaScript"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{ url_for('static', path='icons/langs_libs/Bootstrap_logo.svg.webp') }}" style="max-height: 100px;" alt="Bootstrap"
+                            class="img-fluid">
+                    </div>
+                </div>
+                <h2 class="display-5">Familiar Frameworks:</h2>
+                <div class="row justify-content-center p-5">
+                    <div class="col-sm-1 bg-light rounded">
+                        <img src="{{ url_for('static', path='icons/langs_libs/numpy-logo.png') }}" style="max-height: 100px;" alt="NumPy"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1 bg-light rounded">
+                        <img src="{{ url_for('static', path='icons/langs_libs/Pandas_logo.webp') }}" style="max-height: 100px;"
+                            alt="Pandas" class="img-fluid">
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1 bg-light rounded">
+                        <img src="{{ url_for('static', path='icons/langs_libs/Scikit_learn_logo.webp') }}" style="max-height: 100px;"
+                            alt="Scikit-learn" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row justify-content-center p-5">
+                    <div class="col-sm-1 bg-light rounded">
+                        <img src="{{ url_for('static', path='icons/langs_libs/django_icon.webp') }}" style="max-height: 100px;" alt="Django"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1 bg-light rounded">
+                        <img src="{{ url_for('static', path='icons/langs_libs/pytorch_logo.webp') }}" style="max-height: 100px;"
+                            alt="PyTorch" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row align-items-center" style="height: 50vh;">
-            <div class="col text-center">
-                <h1>Skills</h1>
-                <h2>Proficient Languages:</h2>
-                <p>Python, HTML, CSS, SQL, JavaScript, C</p>
-                <h2>Familiar Frameworks:</h2>
-                <p>NumPy, Pandas, Scikit, Django, PyTorch</p>
-                <h2>Soft Skills:</h2>
-                <p>GitHub, Agile Development, IT, Networks, Customer Service, Problem Solving</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row align-items-center" style="height: 50vh;">
-            <div class="col text-center">
+        <div class="row align-items-center bg-dark" style="height: 50vh;">
+            <div class="col text-center text-white">
                 <h1>Projects</h1>
                 <p><a href="#">Marketing Research</a></p>
                 <p><a href="#">Amazon Web Scraper</a></p>
@@ -77,8 +131,8 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row align-items-center" style="height: 50vh;">
-            <div class="col text-center">
+        <div class="row align-items-center bg-dark" style="height: 50vh;">
+            <div class="col text-center text-white">
                 <h1>Contact Me:</h1>
                 <p><a href="mailto:piercebnance@gmail.com">piercebnance@gmail.com</a></p>
                 <p><a href="https://www.linkedin.com/in/pierce-nance/">LinkedIn</a></p>
