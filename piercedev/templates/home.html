@@ -17,9 +17,18 @@
         }
 
         .bgimg-1 {
-            background-image: url('/static/icons/panda.png');
+            background-image: url('/static/icons/selfie2_head.jpg');
+            background-size: 65% auto;
             min-height: 100%;
         }
+
+            .skill-image {
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .skill-image:hover {
+                transform: scale(1.15);
+            }
     </style>
 </head>
 
@@ -61,58 +70,58 @@
                 <h2 class="display-5">Proficient Languages:</h2>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/Python-Symbol.png') }}" style="max-height: 100px;" alt="Python"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/Python-Symbol.png') }}" style="max-height: 100px;" alt="Python"
+                                class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/html.png') }}" style="max-height: 100px;" alt="HTML"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/html.png') }}" style="max-height: 100px;" alt="HTML"
+                                class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/CSS_logo.webp') }}" style="max-height: 100px;" alt="CSS"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/CSS_logo.webp') }}" style="max-height: 100px;" alt="CSS"
+                                class="img-fluid skill-image">
                     </div>
                 </div>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/sql_nobg.png') }}" style="max-height: 100px;"
-                            alt="SQL" class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/sql_nobg.png') }}" style="max-height: 100px;"
+                                alt="SQL" class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/JS_logo.png') }}" style="max-height: 100px;" alt="JavaScript"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/JS_logo.png') }}" style="max-height: 100px;" alt="JavaScript"
+                                class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-3">
-                        <img src="{{ url_for('static', path='icons/langs_libs/Bootstrap_logo.svg.webp') }}" style="max-height: 100px;" alt="Bootstrap"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/Bootstrap_logo.svg.webp') }}" style="max-height: 100px;" alt="Bootstrap"
+                                class="img-fluid skill-image">
                     </div>
                 </div>
                 <h2 class="display-5">Familiar Frameworks:</h2>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-1 bg-light rounded">
-                        <img src="{{ url_for('static', path='icons/langs_libs/numpy-logo.png') }}" style="max-height: 100px;" alt="NumPy"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/numpy-logo.png') }}" style="max-height: 100px;" alt="NumPy"
+                                class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-1 bg-light rounded">
-                        <img src="{{ url_for('static', path='icons/langs_libs/Pandas_logo.webp') }}" style="max-height: 100px;"
-                            alt="Pandas" class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/Pandas_logo.webp') }}" style="max-height: 100px;"
+                                alt="Pandas" class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-1 bg-light rounded">
-                        <img src="{{ url_for('static', path='icons/langs_libs/Scikit_learn_logo.webp') }}" style="max-height: 100px;"
-                            alt="Scikit-learn" class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/Scikit_learn_logo.webp') }}" style="max-height: 100px;"
+                                alt="Scikit-learn" class="img-fluid skill-image">
                     </div>
                 </div>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-1 bg-light rounded">
-                        <img src="{{ url_for('static', path='icons/langs_libs/django_icon.webp') }}" style="max-height: 100px;" alt="Django"
-                            class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/django_icon.webp') }}" style="max-height: 100px;" alt="Django"
+                                class="img-fluid skill-image">
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-1 bg-light rounded">
-                        <img src="{{ url_for('static', path='icons/langs_libs/pytorch_logo.webp') }}" style="max-height: 100px;"
-                            alt="PyTorch" class="img-fluid">
+                            <img src="{{ url_for('static', path='icons/langs_libs/pytorch_logo.webp') }}" style="max-height: 100px;"
+                                alt="PyTorch" class="img-fluid skill-image">
                     </div>
                 </div>
             </div>
@@ -123,9 +132,9 @@
         <div class="row align-items-center bg-dark" style="height: 50vh;">
             <div class="col text-center text-white">
                 <h1>Projects</h1>
-                <p><a href="#">Marketing Research</a></p>
+                <p><a href="#">Marketing Research with AI</a></p>
                 <p><a href="#">Amazon Web Scraper</a></p>
-                <p><a href="#"></a></p>
+                <p><a href="#">Cleanup of a Large Dataset</a></p>
             </div>
         </div>
     </div>
