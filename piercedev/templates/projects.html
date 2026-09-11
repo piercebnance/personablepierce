@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="bg-dark text-white py-5">
+    <div class="container">
+        <h1 class="display-3 mb-4">Projects</h1>
+        <div class="row g-4">
+            {% for post in posts %}
+            <div class="col-md-4" id="{{ post.slug }}">
+                <article class="card h-100 bg-secondary text-white">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.content }}</p>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

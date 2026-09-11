@@ -12,18 +12,27 @@ templates = Jinja2Templates(directory="templates")
 project_posts: list[dict] = [
     {
         "id": 1,
+        "slug": "marketing-research-with-ai",
         "title": "Marketing Research with AI",
         "content": "An AI powered webapp that can research marketing tactics and give you a summary of the results as well as a plan to implement.",
     },
     {
         "id": 2,
+        "slug": "amazon-web-scraper",
         "title": "Amazon Web Scraper",
         "content": "A web scraper built with Python, BeautifulSoup, and ScrapingBee to extract products with discounts from Amazon.",
     },
     {
         "id": 3,
+        "slug": "cleanup-of-a-large-dataset",
         "title": "Cleanup of a Large Dataset",
         "content": "Intro project where I cleaned up and optimized a large dataset of 2400+ entries, removing duplicates, null values, and irrelevant data. I also performed data normalization and standardization to prepare the dataset for analysis.",
+    },
+    {
+            "id": 4,
+            "slug": "mental-health-detection-using-machine-learning",
+            "title": "Mental Health Detection using Machine Learning",
+            "content": "A machine learning project aimed at detecting signs of mental health issues through analysis of user data and behavior patterns.",
     }
 ]
 
@@ -35,6 +44,15 @@ def home(request: Request):
         request,
         "home.html",
         {"posts": project_posts, "title": "Home"},
+    )
+
+
+@app.get("/projects", include_in_schema=False, name="projects")
+def projects(request: Request):
+    return templates.TemplateResponse(
+        request,
+        "projects.html",
+        {"posts": project_posts, "title": "Projects"},
     )
 
 

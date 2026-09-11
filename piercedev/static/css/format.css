@@ -1,0 +1,8 @@
+.hover-container .hidden-text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-container:hover .hidden-text {
+  opacity: 1;
+}
