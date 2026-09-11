@@ -15,25 +15,36 @@ project_posts: list[dict] = [
         "slug": "marketing-research-with-ai",
         "title": "Marketing Research with AI",
         "content": "An AI powered webapp that can research marketing tactics and give you a summary of the results as well as a plan to implement.",
+        "image": "icons/projects/marketing.png",
+        "link": "https://github.com/piercebnance/Marketing-Trends-AI-Webapp-Tool",
+        "link_label": "View on GitHub",
     },
     {
         "id": 2,
         "slug": "amazon-web-scraper",
         "title": "Amazon Web Scraper",
         "content": "A web scraper built with Python, BeautifulSoup, and ScrapingBee to extract products with discounts from Amazon.",
+        "image": "icons/projects/amazon_steal.png",
+        "link": "https://thewonderscraper.com",
+        "link_label": "View on Website",
     },
     {
         "id": 3,
         "slug": "cleanup-of-a-large-dataset",
         "title": "Cleanup of a Large Dataset",
         "content": "Intro project where I cleaned up and optimized a large dataset of 2400+ entries, removing duplicates, null values, and irrelevant data. I also performed data normalization and standardization to prepare the dataset for analysis.",
+        "image": "icons/projects/db_stock.png",
+        "link": "https://github.com/piercebnance/data-analyst-project---cleaning-and-exploring-a-dataset",
+        "link_label": "View on GitHub",
     },
-    {
-            "id": 4,
-            "slug": "mental-health-detection-using-machine-learning",
-            "title": "Mental Health Detection using Machine Learning",
-            "content": "A machine learning project aimed at detecting signs of mental health issues through analysis of user data and behavior patterns.",
-    }
+    #{
+        #"id": 4,
+        #"slug": "mental-health-detection-using-machine-learning",
+        #"title": "Mental Health Detection using Machine Learning",
+        #"content": "A machine learning project aimed at detecting signs of mental health issues through analysis of user data and behavior patterns.",
+        #"link": "https://github.com/piercedev",
+        #"link_label": "View on GitHub",
+    #}
 ]
 
 

@@ -22,6 +22,12 @@
             justify-content: center;
         }
 
+        .project-card-image {
+            height: 180px;
+            object-fit: contain;
+            width: 100%;
+        }
+
         .bgimg-1, .bgimg-2, .bgimg-3 {
             background-attachment: fixed;
             background-position: center;
@@ -30,7 +36,7 @@
         }
 
         .bgimg-1 {
-            background-image: url('/static/icons/selfie2_head.jpg');
+            background-image: url('/static/icons/pinkhat.jpg');
             background-size: 65% auto;
             min-height: 100%;
         }
@@ -104,7 +110,8 @@
                 <h2 class="display-3">About Me</h2>
                 <p>What's up! I'm Pierce, a software dev and artist from San Diego. I like to create cool things and draw awesome
                     pictures.<br>
-                    Im gonna expand on this later lol.</p>
+                    I'm passionate about creating innovative solutions and bringing ideas to life. Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
+                <p>In my free time, I enjoy drawing, playing video games, and exploring new technologies.</p>
             </div>
             <div class="col-sm-3 p-3 text-center">
                 <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
@@ -203,14 +210,21 @@
                     {% for post in posts %}
                     <div class="col-md-4 p-5">
                         <article class="card project-card bg-secondary text-white">
+                            {% if post.image %}
+                            <img class="project-card-image" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
+                            {% else %}
                             <div class="project-image-placeholder" role="img" aria-label="Image placeholder for {{ post.title }}">
-                                <!--Image coming soon-->
+                                Image coming soon
                             </div>
+                            {% endif %}
                             <div class="card-body">
                                 <h2 class="h4 card-title">
                                     <a class="text-white" href="{{ url_for('projects') }}#{{ post.slug }}">{{ post.title }}</a>
                                 </h2>
                                 <p class="card-text">{{ post.content }}</p>
+                                {% if post.link %}
+                                <a class="btn btn-outline-light" href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.link_label }}</a>
+                                {% endif %}
                             </div>
                         </article>
                     </div>

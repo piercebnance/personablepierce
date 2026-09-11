@@ -1,16 +1,43 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<style>
+    .project-card-image {
+        height: 180px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .project-image-placeholder {
+        align-items: center;
+        background-color: #343a40;
+        color: #adb5bd;
+        display: flex;
+        height: 180px;
+        justify-content: center;
+    }
+</style>
+
 <section class="bg-dark text-white py-5">
-    <div class="container">
+    <div class="container-fluid p-4">
         <h1 class="display-3 mb-4">Projects</h1>
         <div class="row g-4">
             {% for post in posts %}
             <div class="col-md-4" id="{{ post.slug }}">
                 <article class="card h-100 bg-secondary text-white">
+                    {% if post.image %}
+                    <img class="project-card-image" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
+                    {% else %}
+                    <div class="project-image-placeholder" role="img" aria-label="Image placeholder for {{ post.title }}">
+                        Image coming soon
+                    </div>
+                    {% endif %}
                     <div class="card-body">
                         <h2 class="h4 card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.content }}</p>
+                        {% if post.link %}
+                        <a class="btn btn-outline-light" href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.link_label }}</a>
+                        {% endif %}
                     </div>
                 </article>
             </div>
