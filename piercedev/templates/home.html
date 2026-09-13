@@ -96,7 +96,7 @@
             <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
             <div class="col-sm-4 text-center bg-dark text-white p-10 rounded opacity-75">
                 <h1 class="display-1">Pierce Nance</h1>
-                <p>Software Developer, IT Specialist, Illustrator</p>
+                <p>Software Developer & IT Specialist</p>
             </div>
             <div class="col-sm-4 p-3"></div>
         </div>
@@ -128,6 +128,8 @@
                 <h1 class="display-3 underline">Skills</h1>
                 <div class="row justify-content-center p-5"></div>
                 <h2 class="display-5">Languages I've Worked With:</h2>
+                <div class="row border justify-content-center p-10">
+                    <div class="col-sm-3"></div>
                 <div class="row justify-content-center p-5">
                         <div class="col-sm-3 skill-item">
                             <img src="{{ url_for('static', path='icons/langs_libs/Python-Symbol.png') }}" style="max-height: 100px;" alt="Python"
@@ -187,9 +189,9 @@
                 </div>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 150px;" alt="Django"
+                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 100px;" alt="Django"
                                 class="img-fluid skill-image">
-                            <p class="skill-description">Web Development</p>
+                            <p class="skill-description">Pragmatic Python Web Framework</p>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-2 rounded skill-item">
@@ -197,10 +199,18 @@
                                 alt="PyTorch" class="img-fluid skill-image">
                             <p class="skill-description">Deep Learning</p>
                     </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2 rounded skill-item text-center d-flex flex-column align-items-center">
+                        <p></p>
+                            <img src="{{ url_for('static', path='icons/langs_libs/FastAPI_logo.webp') }}" style="max-height: 100px;"
+                                alt="FastAPI" class="img-fluid skill-image 98px">
+                            <p class="skill-description">Web API Framework</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+                </div>
 
     <div class="container-fluid">
         <div class="row align-items-center py-5">
