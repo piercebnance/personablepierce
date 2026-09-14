@@ -11,12 +11,14 @@
     <style>
         .project-card {
             height: 100%;
+            background-color: rgba(59, 65, 71, 0.75);
+            color: #070707;
         }
 
         .project-image-placeholder {
             align-items: center;
-            background-color: #343a40;
-            color: #adb5bd;
+            background-color: #23262a;
+            color: #070707;
             display: flex;
             height: 180px;
             justify-content: center;
@@ -87,6 +89,31 @@
             background-size: 100% auto;
             min-height: 100%;
         }
+
+        .skills-container {
+            background-color: rgba(59, 65, 71, 0.75); 
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .skills-container {
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+        }
+
+        .contact-container {
+            background-color: rgba(45, 50, 55, 0.75);
+            margin-left: 3rem;
+            margin-right: 3rem; 
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-container {
+            background-color: rgba(45, 50, 55, 0.75);
+        }
     </style>
 </head>
 
@@ -94,7 +121,7 @@
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="row align-items-center" style="height: 100vh; padding: -5px;">
             <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
-            <div class="col-sm-4 text-center bg-dark text-white p-10 rounded opacity-75">
+            <div class="col-sm-4 text-center about-container text-white p-10 rounded">
                 <h1 class="display-1">Pierce Nance</h1>
                 <p>Software Developer & IT Specialist</p>
             </div>
@@ -106,29 +133,46 @@
     <div class="container-fluid">
         <div class="row align-items-center " style="height: 75vh;">
             <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
-            <div class="col-sm-3 p-3 text-center text-white bg-dark rounded opacity-75">
+            <div class="col-sm-3 p-3 about-container text-center text-white rounded">
                 <h2 class="display-3">About Me</h2>
-                <p>What's up! I'm Pierce, a software dev and artist from San Diego. I like to create cool things and draw awesome
-                    pictures.<br>
-                    I'm passionate about creating innovative solutions and bringing ideas to life. Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
-                <p>In my free time, I enjoy drawing, playing video games, and exploring new technologies.</p>
+                <p>What's up! I'm Pierce, a software dev and IT specialist from San Diego.</p>
+                <p>I'm passionate about creating innovative solutions and bringing ideas to life. And with a Bachelor's degree in Computer Science, as well as certifications in the A+ and Network+, I have a strong foundation in programming, hardware/software management, and problem-solving.
+                     Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
+                <p>In my free time, I enjoy drawing, hiking, skateboarding, video games, and messing around with new or unfamiliar technologies.</p>
             </div>
             <div class="col-sm-3 p-3 text-center">
                 <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
             </div>
             <div class="col-sm-3 p-3"></div>
+            
         </div>
     </div>
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                    <a class="btn btn-outline-light" href="{{ url_for('static', path='resume.pdf') }}" download>
+                        <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+                    </a>
+                    <a class="btn btn-outline-light" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+                    </a>
+                    <a class="btn btn-outline-light" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+                    </a>
+    </div>
 
-    
+    <div class="container-fluid">
+        <div class="row align-items-center" style="height: 25vh;">
+            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+        </div>
+    </div>
 
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col text-center text-white">
-                <h1 class="display-3 underline">Skills</h1>
+                <h1 class="display-3 ">Skills</h1>
                 <div class="row justify-content-center p-5"></div>
-                <h2 class="display-5">Languages I've Worked With:</h2>
-                <div class="row border justify-content-center p-10">
+                
+                <div class="row skills-container border justify-content-center p-4"> <!--containter for skills + border-->
+                    <h2 class="display-5">Languages I've Worked With:</h2>
                     <div class="col-sm-3"></div>
                 <div class="row justify-content-center p-5">
                         <div class="col-sm-3 skill-item">
@@ -165,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-center p-5"></div>
+                <div class="row justify-content-center p-5"></div> <!--spacing-->
 
                 <h2 class="display-5">Familiar Frameworks:</h2>
                 <div class="row justify-content-center p-5">
@@ -189,20 +233,19 @@
                 </div>
                 <div class="row justify-content-center p-5">
                     <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 100px;" alt="Django"
+                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 75px;" alt="Django"
                                 class="img-fluid skill-image">
                             <p class="skill-description">Pragmatic Python Web Framework</p>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/pytorch_wt.png') }}" style="max-height: 100px;"
+                            <img src="{{ url_for('static', path='icons/langs_libs/pytorch_wt.png') }}" style="max-height: 85px;"
                                 alt="PyTorch" class="img-fluid skill-image">
                             <p class="skill-description">Deep Learning</p>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-2 rounded skill-item text-center d-flex flex-column align-items-center">
-                        <p></p>
-                            <img src="{{ url_for('static', path='icons/langs_libs/FastAPI_logo.webp') }}" style="max-height: 100px;"
+                            <img src="{{ url_for('static', path='icons/langs_libs/FastAPI_logo.webp') }}" style="max-height: 85px;"
                                 alt="FastAPI" class="img-fluid skill-image 98px">
                             <p class="skill-description">Web API Framework</p>
                     </div>
@@ -213,13 +256,19 @@
                 </div>
 
     <div class="container-fluid">
+        <div class="row align-items-center" style="height: 25vh;">
+            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
         <div class="row align-items-center py-5">
             <div class="col text-white">
                 <h1 class="display-3 underline text-center">Projects</h1>
                 <div class="row g-4 mt-3">
                     {% for post in posts %}
                     <div class="col-md-4 p-5">
-                        <article class="card project-card bg-secondary text-white">
+                        <article class="card project-card text-white">
                             {% if post.image %}
                             <img class="project-card-image" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
                             {% else %}
@@ -228,8 +277,8 @@
                             </div>
                             {% endif %}
                             <div class="card-body">
-                                <h2 class="h4 card-title">
-                                    <a class="text-white" href="{{ url_for('projects') }}#{{ post.slug }}">{{ post.title }}</a>
+                                <h2 class="h4 card-title"> <!--href="{{ url_for('projects') }}#{{ post.slug }}" place into <a> later when projects.html is better-->
+                                    <a class="text-white" >{{ post.title }}</a>
                                 </h2>
                                 <p class="card-text">{{ post.content }}</p>
                                 {% if post.link %}
@@ -245,15 +294,19 @@
     </div>
 
     <div class="container-fluid">
+        <div class="row align-items-center" style="height: 25vh;">
+            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
         <div class="row align-items-center" style="height: 50vh;">
             <div class="col-sm-3 p-3"></div>
             <div class="col text-center text-white">
                 <h1 class="display-3 underline">Contact Me</h1>
-                <p>Send me a message! I'd love to hear from you about anything!</p>
-                <!--<p><a href="mailto:piercebnance@gmail.com">piercebnance@gmail.com</a></p>
-                <p><a href="https://www.linkedin.com/in/pierce-nance/">LinkedIn</a></p>
-                <p><a href="https://github.com/piercedev">GitHub</a></p> -->
-                <form class="bg-dark text-white p-4 rounded" action="https://formsubmit.co/piercebnance@gmail.com" method="POST" enctype="text/plain">
+                
+                <form class="contact-container text-white p-3 rounded" style="height: 50vh;" action="https://formsubmit.co/piercebnance@gmail.com" method="POST" enctype="text/plain">
+                    <p>Send me a message! I'd love to hear from you about anything!</p>
                     <div class="mb-3">
                         <label for="name" class="form-label"></label>
                         <input type="text" class="form-control" name="name" placeholder="Your Name">
@@ -264,7 +317,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label"></label>
-                        <textarea class="form-control" name="message" rows="3" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" name="message" rows="4" placeholder="Your Message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>

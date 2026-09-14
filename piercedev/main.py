@@ -24,7 +24,7 @@ project_posts: list[dict] = [
         "slug": "amazon-web-scraper",
         "title": "Amazon Web Scraper",
         "content": "A web scraper built with Python, BeautifulSoup, and ScrapingBee to extract products with discounts from Amazon.",
-        "image": "icons/projects/amazon_steal.png",
+        "image": "icons/projects/web_scrape.png",
         "link": "https://thewonderscraper.com",
         "link_label": "View on Website",
     },
@@ -62,7 +62,7 @@ def home(request: Request):
 def projects(request: Request):
     return templates.TemplateResponse(
         request,
-        "projects.html",
+        #"projects.html",
         {"posts": project_posts, "title": "Projects"},
     )
 
