@@ -47,11 +47,12 @@
                 transition: transform 0.2s ease-in-out;
             }
 
-            .skill-image:hover {
+            .skill-item:hover .skill-image {
                 transform: scale(1.15);
             }
 
             .skill-item {
+                cursor: pointer;
                 position: relative;
             }
 
@@ -117,11 +118,11 @@
     </style>
 </head>
 
-<body class="bgimg-2">
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="row align-items-center" style="height: 100vh; padding: -5px;">
+<body class="bgimg-2 flex-wrap container-fluid ">
+    <div class=" w3-display-container w3-opacity-min" id="home">
+        <div class="row align-items-center" p-3 style="height: 100vh;">
             <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
-            <div class="col-sm-4 text-center about-container text-white p-10 rounded">
+            <div class="col-sm-4 text-center about-container text-white p-5 rounded">
                 <h1 class="display-1">Pierce Nance</h1>
                 <p>Software Developer & IT Specialist</p>
             </div>
@@ -136,12 +137,12 @@
             <div class="col-sm-3 p-3 about-container text-center text-white rounded">
                 <h2 class="display-3">About Me</h2>
                 <p>What's up! I'm Pierce, a software dev and IT specialist from San Diego.</p>
-                <p>I'm passionate about creating innovative solutions and bringing ideas to life. And with a Bachelor's degree in Computer Science, as well as certifications in the A+ and Network+, I have a strong foundation in programming, hardware/software management, and problem-solving.
+                <p>I'm passionate about creating innovative solutions and bringing ideas to life. With a Bachelor's degree in Computer Science, as well as certifications in the COMPTIA A+ and Network+, I have a strong foundation in programming, hardware/software management, networking, and problem-solving.
                      Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
                 <p>In my free time, I enjoy drawing, hiking, skateboarding, video games, and messing around with new or unfamiliar technologies.</p>
             </div>
             <div class="col-sm-3 p-3 text-center">
-                <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid">
+                <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid rounded">
             </div>
             <div class="col-sm-3 p-3"></div>
             
@@ -171,11 +172,11 @@
                 <h1 class="display-3 ">Skills</h1>
                 <div class="row justify-content-center p-5"></div>
                 
-                <div class="row skills-container border justify-content-center p-4"> <!--containter for skills + border-->
+                <div class="skills-container border justify-content-center p-4"> <!--containter for skills + border-->
                     <h2 class="display-5">Languages I've Worked With:</h2>
                     <div class="col-sm-3"></div>
-                <div class="row justify-content-center p-5">
-                        <div class="col-sm-3 skill-item">
+                <div class="row justify-content-center p-3">
+                        <div class="col-sm-3 skill-item text-center d-flex flex-column align-items-center">
                             <img src="{{ url_for('static', path='icons/langs_libs/python_lit.png') }}" style="max-height: 100px;" alt="Python"
                                 class="img-fluid skill-image">
                             <p class="skill-description">AI, ML, and Backend</p>
