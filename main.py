@@ -15,7 +15,7 @@ project_posts: list[dict] = [
         "slug": "marketing-research-with-ai",
         "title": "Marketing Research with AI",
         "content": "An AI powered webapp that can research marketing tactics and give you a summary of the results as well as a plan to implement.",
-        "image": "icons/projects/marketing.png",
+        "image": "icons/projects/mkt.png",
         "link": "https://github.com/piercebnance/Marketing-Trends-AI-Webapp-Tool",
         "link_label": "View on GitHub",
     },
