@@ -32,7 +32,7 @@ project_posts: list[dict] = [
         "id": 3,
         "slug": "cleanup-of-a-large-dataset",
         "title": "Cleanup of a Large Dataset",
-        "content": "Intro project where I cleaned up and optimized a large dataset of 2400+ entries, removing duplicates, null values, and irrelevant data. I also performed data normalization and standardization to prepare the dataset for analysis.",
+        "content": "Project where I cleaned up and optimized a large dataset of 2400+ entries. I also performed data normalization and standardization.",
         "image": "icons/projects/db_stock.png",
         "link": "https://github.com/piercebnance/data-analyst-project---cleaning-and-exploring-a-dataset",
         "link_label": "View on GitHub",

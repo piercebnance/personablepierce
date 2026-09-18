@@ -122,7 +122,7 @@
     <div class=" w3-display-container w3-opacity-min" id="home">
         <div class="row align-items-center" p-3 style="height: 100vh;">
             <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
-            <div class="col-sm-4 text-center about-container text-white p-5 rounded">
+            <div class="col-sm-4 text-center about-container text-white p-5 rounded" style="border: 2px solid #d7dbe0;">
                 <h1 class="display-1">Pierce Nance</h1>
                 <p>Software Developer & IT Specialist</p>
             </div>
@@ -133,7 +133,7 @@
 
     <div class="container-fluid">
         <div class="row align-items-center " style="height: 75vh;">
-            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+            <div class="col-sm-3"></div> <!-- Empty column for spacing reference -->
             <div class="col-sm-3 p-3 bg-dark text-center text-white rounded" style="border: 2px solid #d7dbe0;">
                 <h2 class="display-3">About Me</h2>
                 <p>What's up! I'm Pierce, a software dev and IT specialist from San Diego.</p>
@@ -141,10 +141,11 @@
                      Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
                 <p>In my free time, I enjoy drawing, hiking, skateboarding, video games, and messing around with new or unfamiliar technologies.</p>
             </div>
-            <div class="col-sm-3 p-3 text-center">
-                <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 350px;" alt="About Me" class="img-fluid rounded">
+            
+            <div class="col-sm-3 p-3 text-center" style="height: 75%;">
+                <img src="{{ url_for('static', path='icons/selfie1.jpg') }}" style="max-height: 500px; height: 100%;" alt="About Me" class="img-fluid rounded">
             </div>
-            <div class="col-sm-3 p-3"></div>
+            <div class="col-sm-3"></div>
             
         </div>
     </div>
@@ -170,7 +171,8 @@
         <div class="row align-items-center">
             <div class="col text-center text-white">
                 <h1 class="display-3 ">Skills</h1>
-                <div class="row justify-content-center p-5"></div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
                 
                 <div class="skills-container border rounded justify-content-center p-4"> <!--containter for skills + border-->
                     <h2 class="display-5">Languages I've Worked With:</h2>
@@ -181,11 +183,13 @@
                                 class="img-fluid skill-image">
                             <p class="skill-description">AI, ML, and Backend</p>
                     </div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-3 skill-item">
                             <img src="{{ url_for('static', path='icons/langs_libs/HTML_CSS.png') }}" style="max-height: 100px;" alt="CSS"
                                 class="img-fluid skill-image">
                             <p class="skill-description">Frontend Development</p>
                     </div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-3 skill-item">
                             <img src="{{ url_for('static', path='icons/langs_libs/java_icon.webp') }}" style="max-height: 100px;" alt="Java"
                                 class="img-fluid skill-image">
@@ -198,63 +202,79 @@
                                 alt="SQL" class="img-fluid skill-image">
                             <p class="skill-description">Database Management</p>
                     </div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-3 skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/JS_logo.png') }}" style="max-height: 100px;" alt="JavaScript"
+                            <img src="{{ url_for('static', path='icons/langs_libs/JS_lit.png') }}" style="max-height: 100px;" alt="JavaScript"
                                 class="img-fluid skill-image">
                             <p class="skill-description">Client-Side Scripting and Backend</p>
                     </div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-3 skill-item">
                             <img src="{{ url_for('static', path='icons/langs_libs/Bootstrap_logo.svg.webp') }}" style="max-height: 100px;" alt="Bootstrap"
                                 class="img-fluid skill-image">
                             <p class="skill-description">Advanced Frontend Styling</p>
                     </div>
                 </div>
+            </div>
+            </div>
+        </div>
 
-                <div class="row justify-content-center p-5"></div> <!--spacing-->
+        <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-3 p-3"></div> <!-- Empty column for spacing reference -->
+        </div>
+    </div>
 
-                <h2 class="display-5">Familiar Frameworks:</h2>
-                <div class="row justify-content-center p-5">
-                    <div class="col-sm-1 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/numpy-logo.png') }}" style="max-height: 100px;" alt="NumPy"
+        <div class="row justify-content-center">
+                    <div class="col-md-8">
+                <div class="skills-container border rounded justify-content-center p-4"> <!--containter for frameworks + border-->
+                    <h2 class="display-5">Familar Frameworks:</h2>
+                    <div class="col-sm-3"></div>
+                <div class="row justify-content-center p-3">
+                        <div class="col-sm-3 skill-item text-center d-flex flex-column align-items-center">
+                            <img src="{{ url_for('static', path='icons/langs_libs/numpy-logo.png') }}" style="max-height: 100px;" alt="Numpy"
                                 class="img-fluid skill-image">
                             <p class="skill-description">Numerical Computing</p>
                     </div>
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/pandas_lit.png') }}" style="max-height: 100px;"
-                                alt="Pandas" class="img-fluid skill-image">
+                    <div class="col-sm-3 skill-item">
+                            <img src="{{ url_for('static', path='icons/langs_libs/pandas_lit.png') }}" style="max-height: 100px;" alt="Pandas"
+                                class="img-fluid skill-image">
                             <p class="skill-description">Data Analysis</p>
                     </div>
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/Scikit_learn_logo.webp') }}" style="max-height: 100px;"
-                                alt="Scikit-learn" class="img-fluid skill-image">
+                    <div class="col-sm-3 skill-item">
+                            <img src="{{ url_for('static', path='icons/langs_libs/Scikit_learn_logo.webp') }}" style="max-height: 100px;" alt="Scikit-learn"
+                                class="img-fluid skill-image">
                             <p class="skill-description">Machine Learning</p>
                     </div>
                 </div>
                 <div class="row justify-content-center p-5">
-                    <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 75px;" alt="Django"
-                                class="img-fluid skill-image">
-                            <p class="skill-description">Pragmatic Python Web Framework</p>
+                    <div class="col-sm-3 skill-item">
+                            <img src="{{ url_for('static', path='icons/langs_libs/django_lit.png') }}" style="max-height: 100px;"
+                                alt="Django" class="img-fluid skill-image">
+                            <p class="skill-description">Web Development</p>
                     </div>
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-2 rounded skill-item">
-                            <img src="{{ url_for('static', path='icons/langs_libs/pytorch_wt.png') }}" style="max-height: 85px;"
-                                alt="PyTorch" class="img-fluid skill-image">
+                    <div class="col-sm-3 skill-item">
+                            <img src="{{ url_for('static', path='icons/langs_libs/pytorch_wt.png') }}" style="max-height: 100px;" alt="PyTorch"
+                                class="img-fluid skill-image">
                             <p class="skill-description">Deep Learning</p>
                     </div>
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-2 rounded skill-item text-center d-flex flex-column align-items-center">
-                            <img src="{{ url_for('static', path='icons/langs_libs/FastAPI_logo.webp') }}" style="max-height: 85px;"
-                                alt="FastAPI" class="img-fluid skill-image 98px">
-                            <p class="skill-description">Web API Framework</p>
+                    <div class="col-sm-3 skill-item">
+                            <img src="{{ url_for('static', path='icons/langs_libs/FastAPI_logo.webp') }}" style="max-height: 100px;" alt="FastAPI"
+                                class="img-fluid skill-image">
+                            <p class="skill-description">API Development</p>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
-                </div>
+        </div>
+    </div>
+    
 
     <div class="container-fluid">
         <div class="row align-items-center" style="height: 25vh;">
@@ -263,15 +283,14 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row align-items-center py-5">
-            <div class="col text-white">
-                <h1 class="display-3 underline text-center">Projects</h1>
+        <div class="row align-items-center p-1">
                 <div class="row g-4 mt-3">
+                    <h1 class="display-3 underline text-center text-white">Projects</h1>
                     {% for post in posts %}
-                    <div class="col-md-4 p-5">
-                        <article class="card project-card text-white">
+                    <div class="col-md-4 p-3">
+                        <article class="card project-card text-white" style="border: 2px solid #d7dbe0;">
                             {% if post.image %}
-                            <img class="project-card-image" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
+                            <img class="project-card-image p-2" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
                             {% else %}
                             <div class="project-image-placeholder" role="img" aria-label="Image placeholder for {{ post.title }}">
                                 Image coming soon
