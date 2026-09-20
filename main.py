@@ -39,6 +39,15 @@ project_posts: list[dict] = [
     },
     #{
         #"id": 4,
+        #"slug": "my-personal-website",
+        #"title": "My Personal Website",
+        #"content": "My own website! I built this from the ground up with FastAPI, Bootstrap, and Python.",
+        #"image": "icons/projects/website.png",
+        #"link": "https://github.com/piercedev",
+        #"link_label": "View on GitHub",
+    #},
+    #{
+        #"id": 4,
         #"slug": "mental-health-detection-using-machine-learning",
         #"title": "Mental Health Detection using Machine Learning",
         #"content": "A machine learning project aimed at detecting signs of mental health issues through analysis of user data and behavior patterns.",
