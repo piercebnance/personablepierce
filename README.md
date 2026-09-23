@@ -2,18 +2,14 @@
 Planned Features:
 Navbar:
   - Home Page (start)
-  - Projects Page
   - Illustrations Page
   - Cool Things Page
     
 Home Page:
-  - Description
-  - Picture(s) of me
-  - Sidebars display different pictures of me and drawings Ive done
-
-Projects Page:
-  - List projects I've done (likely will do by posts/cards), clicking will expand and show more detail and also give a link to the github page
-  - Display as posts in form of cards
+  - About Me (brief overview of me)
+  - Skills (languages and frameworks)
+  - Projects (top 3 or recent projects i wanna display)
+  - Contact (talk to me)
 
 Illustrations Page:
   - Image board style, I will be able to create posts as I wish as the sole admin
