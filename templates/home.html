@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/format.css">
     <style>
         .project-card {
             height: 100%;
@@ -86,7 +87,7 @@
             }
 
         .bgimg-2 {
-            background-image: url('/static/icons/minit_frens.jpg');
+            background-image: url('/static/icons/minit_frens_dark.png');
             background-position: center top;
             background-size: cover;
             min-height: 100vh;
@@ -124,16 +125,65 @@
         .about-container {
             background-color: rgba(45, 50, 55, 0.75);
         }
+
+        @font-face {
+            font-family: 'Velodrome';
+            src: url('/static/css/VelodromeFuturisticTechStencil-Yq6wL.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1,
+        .h1 {
+            font-family: 'Velodrome', sans-serif;
+        }
+
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 108%;
+            height: 130vh;
+            z-index: 0;
+            background-image: url('/static/icons/minit_frens_dark.png');
+            background-size: cover;
+            background-position: center top;
+            will-change: transform;
+        }
+
+        .parallax-bg ~ * {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes layerParallax {
+            from {
+                transform: translateY(0%);
+            }
+            to {
+                transform: translateY(-20%);
+            }
+        }   
+
+        @supports (animation-timeline: scroll(root)) {
+            .parallax-bg {
+                animation: layerParallax linear both;
+                animation-timeline: scroll(root);
+            }
+        }
+
     </style>
 </head>
 
-<body class="bgimg-2 flex-wrap container-fluid ">
+<body class="flex-wrap container-fluid ">
+    <!-- Note: The parallax background effect may not work correctly on non-Chromium browsers -->
+    <div class="parallax-bg" aria-hidden="true"></div>
     <div class=" w3-display-container w3-opacity-min" id="home">
         <div class="row align-items-center" p-3 style="height: 100vh;">
             <div class="col-sm-4 p-3"></div> <!-- Empty column for spacing reference -->
             <div class="col-sm-4 text-center about-container text-white p-5 rounded" style="border: 2px solid #d7dbe0;">
                 <h1 class="display-1">Pierce Nance</h1>
-                <p>Software Developer & IT Specialist</p>
+                <p style="font-weight: bold;">Software Developer & IT Specialist</p>
             </div>
             <div class="col-sm-4 p-3"></div>
         </div>
@@ -148,16 +198,16 @@
             </div> <!-- Empty column for spacing reference -->
                 <div class="row align-items-center">
                     <div class="col-sm-3"></div> <!-- Empty column for spacing reference -->
-                    <div class="col-sm-3 p-4 bg-dark align-self-start text-center text-white rounded h-100" style="border: 2px solid #d7dbe0;">
+                    <div class="col-sm-3 p-4 bg-dark align-self-start text-center text-white rounded h-100" style="border: 2px solid #d7dbe0; font-weight: bold;">
 
-                        <p>What's up! I'm Pierce, a software dev and IT specialist from San Diego.</p>
+                        <p>What's up! I'm Pierce, a programmer and IT specialist from San Diego.</p>
                         <p>I'm passionate about creating innovative solutions and bringing bright ideas to life. With a Bachelor's degree in Computer Science, as well as certifications in the COMPTIA A+ and Network+, I have a strong foundation in programming, hardware/software management, networking, and problem-solving.
                         Some of my areas of programming include AI, Machine Learning, and Web Development.</p>
                         <p>In my free time, I enjoy drawing, hiking, skateboarding, video games, and messing around with new or unfamiliar technologies.</p>
                     
                     </div>
                     <div class="col-sm-3 align-self-start text-center">
-                        <img src="{{ url_for('static', path='icons/beige_fwd_edit.jpg') }}" style="max-height: 550px; height: 100%; border: 2px solid #d7dbe0;" alt="About Me" class="img-fluid rounded ">
+                        <img src="{{ url_for('static', path='icons/beige_fwd_edit2.jpg') }}" style="max-height: 550px; height: 100%; border: 2px solid #d7dbe0;" alt="About Me" class="img-fluid rounded ">
                     </div>
                 </div>
                 
@@ -168,8 +218,8 @@
     </div>
     <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
                     <a></a>
-                    <a class="btn btn-outline-light" href="{{ url_for('static', path='resume.pdf') }}" download>
-                        <i class="fa fa-download" aria-hidden="true"></i> My Resume
+                    <a class="btn btn-outline-light" href="{{ url_for('static', path='Pierce_Nance_Resume_final.pdf') }}" download>
+                        <i class="fa fa-download" aria-hidden="true" style></i> My Resume
                     </a>
                     <a class="btn btn-outline-light" href="https://github.com/piercebnance" target="_blank" rel="noopener noreferrer">
                         <i class="fa fa-github" aria-hidden="true"></i> GitHub
@@ -196,7 +246,7 @@
                     <div class="col-md-8">
                 
                 <div class="skills-container border rounded justify-content-center p-4"> <!--containter for skills + border-->
-                    <h2 class="display-5 text-white">Languages I've Worked With:</h2>
+                    <h2 class="display-5 text-white" style="font-family: 'Velodrome', sans-serif;">Languages I've Worked With:</h2>
                     <div class="col-sm-3"></div>
                 <div class="row justify-content-center p-3">
                         <div class="col-sm-3 p-3 skill-item text-center d-flex flex-column align-items-center">
@@ -249,7 +299,7 @@
         <div class="row justify-content-center">
                     <div class="col-md-8">
                 <div class="skills-container border rounded justify-content-center p-4"> <!--containter for frameworks + border-->
-                    <h2 class="display-5">Familar Frameworks:</h2>
+                    <h2 class="display-5" style="font-family: 'Velodrome', sans-serif;">Familar Frameworks:</h2>
                     <div class="col-sm-3"></div>
                 <div class="row justify-content-center p-3">
                         <div class="col-sm-3 p-3 skill-item text-center d-flex flex-column align-items-center">
@@ -308,8 +358,9 @@
                 <div class="row g-4 mt-3">
                     <h1 class="display-3 underline text-center text-white">Projects</h1>
                     {% for post in posts %}
-                    <div class="col-md-4 p-3">
-                        <article class="card project-card text-white" style="border: 2px solid #d7dbe0;">
+                    
+                    <div class="col-md-4 p-5">
+                        <article class="card project-card text-white" style="border: 2px solid #d7dbe0; font-weight: bold;">
                             {% if post.image %}
                             <img class="project-card-image p-2" src="{{ url_for('static', path=post.image) }}" alt="{{ post.title }} project image">
                             {% else %}
@@ -318,16 +369,18 @@
                             </div>
                             {% endif %}
                             <div class="card-body">
-                                <h2 class="h4 card-title"> <!--href="{{ url_for('projects') }}#{{ post.slug }}" place into <a> later when projects.html is better-->
+                                <h2 class="h4 card-title" style="font-weight: bold;"> <!--href="{{ url_for('projects') }}#{{ post.slug }}" place into <a> later when projects.html is better-->
                                     <a class="text-white" >{{ post.title }}</a>
                                 </h2>
                                 <p class="card-text">{{ post.content }}</p>
                                 {% if post.link %}
-                                <a class="btn btn-outline-light" href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.link_label }}</a>
+                                <a class="btn btn-outline-light" style="font-weight: bold;" href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.link_label }}</a>
                                 {% endif %}
                             </div>
                         </article>
+                        
                     </div>
+                    
                     {% endfor %}
                 </div>
             </div>
@@ -348,7 +401,7 @@
                 <div class="row align-items-center"></div>
                 
                 <form class="contact-container text-white p-3 rounded border" style="height: 50vh;" action="https://formsubmit.co/piercebnance@gmail.com" method="POST" enctype="text/plain">
-                    <p>Send me a message! I'd love to hear from you about anything!</p>
+                    <p style="font-weight: bold;">Send me a message! I'd love to hear from you about anything!</p>
                     <div class="mb-3">
                         <label for="name" class="form-label"></label>
                         <input type="text" class="form-control" name="name" placeholder="Your Name">
@@ -374,9 +427,30 @@
         </div>
     </div>
 
-    
+    <script>
+        const parallaxLayer = document.querySelector('.parallax-bg');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const supportsScrollTimeline = CSS.supports('animation-timeline: scroll(root)');
+        let parallaxFrame;
 
+        function updateParallaxFallback() {
+            parallaxFrame = undefined;
+            const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = scrollRange > 0 ? window.scrollY / scrollRange : 0;
+            parallaxLayer.style.transform = `translateY(${-scrollProgress * 20}%)`;
+        }
 
+        function requestParallaxFallback() {
+            if (!parallaxFrame) {
+                parallaxFrame = requestAnimationFrame(updateParallaxFallback);
+            }
+        }
+
+        if (parallaxLayer && !supportsScrollTimeline && !reducedMotion.matches) {
+            window.addEventListener('scroll', requestParallaxFallback, { passive: true });
+            updateParallaxFallback();
+        }
+    </script>
 
 <!--
 {% for post in posts %}

@@ -6,3 +6,14 @@
 .hover-container:hover .hidden-text {
   opacity: 1;
 }
+
+@font-face {
+  font-family: 'Velodrome';
+  src: url('/static/css/VelodromeFuturisticTechStencil-Yq6wL.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.h1{
+  font-family: 'Velodrome', sans-serif;
+}
