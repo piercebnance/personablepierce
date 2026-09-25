@@ -407,19 +407,23 @@
                 <h1 class="display-3 underline">Contact Me</h1>
                 <div class="row align-items-center"></div>
                 
-                <form class="contact-container text-white p-3 rounded border" style="min-height: 50vh; height: auto;" action="https://formsubmit.co/b17cf2094eda3ba8c3e034ce1486f284" method="POST" enctype="text/plain">
+                <form target="_blank" action="https://formsubmit.co/piercebnance@gmail.com" method="POST" class="contact-container text-white p-3 rounded border" style="min-height: 50vh; height: auto;" >
                     <p style="font-weight: bold;">Send me a message! I'd love to hear from you about anything!</p>
-                    <div class="mb-3">
-                        <label for="name" class="form-label"></label>
-                        <input type="text" class="form-control" name="name" placeholder="Your Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label"></label>
-                        <input type="email" class="form-control" name="email" placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
+                    <div class="mb-3 form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="name" class="form-label"></label>
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                                <div class="col">
+                                <label for="email" class="form-label"></label>
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="mb-3 form-group">
                         <label for="message" class="form-label"></label>
-                        <textarea class="form-control" name="message" rows="4" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary bg-dark" style="border: 2px solid #d7dbe0;">Send Message</button>
                 </form>
@@ -427,6 +431,7 @@
             <div class="col-sm-3 p-3"></div>
         </div>
     </div>
+
 
     <div class="container-fluid">
         <div class="row align-items-center" style="height: 25vh;">
