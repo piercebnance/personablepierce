@@ -1,15 +1,12 @@
 # Pierce's Personal Website
+Built from the ground up with Bootstrap, Python, and FastAPI. A testament of myself, with barely any AI used to assist the process.
+
 Planned Features:
+
 Navbar:
   - Home Page (start)
   - Illustrations Page
   - Cool Things Page
-    
-Home Page:
-  - About Me (brief overview of me)
-  - Skills (languages and frameworks)
-  - Projects (top 3 or recent projects)
-  - Contact (talk to me!)
 
 Illustrations Page:
   - Image board style
